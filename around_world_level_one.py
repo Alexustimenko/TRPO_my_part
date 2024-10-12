@@ -5,6 +5,7 @@ from cursor_manager import apply_cursor_to_window
 from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from image_loader import load_image_by_name
+from shake_manager import shake_button
 def create_who_is_bigger(root):
     from menu_window_creation import create_menu
 
@@ -26,7 +27,7 @@ def create_who_is_bigger(root):
     cow_button = tk.Button(bigger_window, image=cow_image, width=400, height=400,bg="#FFC107")
     cow_button.place(relx=0.3, rely=0.5, anchor='center')
 
-    kotik_button = tk.Button(bigger_window, image=kotik_image, width=400, height=400,bg="#FFC107")
+    kotik_button = tk.Button(bigger_window, image=kotik_image, width=400, height=400,bg="#FFC107",command=lambda: shake_button(kotik_button))
     kotik_button.place(relx=0.7, rely=0.5, anchor='center')
 
     attach_hover_sound(cow_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\korova.mp3")
