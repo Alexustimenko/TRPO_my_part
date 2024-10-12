@@ -32,4 +32,6 @@ insert_image('bear_cur','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\
 insert_image('cursor_fish','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\free-icon-goldfish-6789575-_1_.cur')
 insert_image('fish111','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\fish111.cur')
 insert_image('ez111','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\ez.cur')
+insert_image('korova','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\korova.png')
+insert_image('kot_around_the_world1','F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\kotikv7.png')
 conn.close()

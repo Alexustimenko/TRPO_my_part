@@ -4,6 +4,7 @@ from window_manager import switch_window
 from cursor_manager import apply_cursor_to_window
 from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
+from image_loader import load_image_by_name
 def create_who_is_bigger(root):
     from menu_window_creation import create_menu
 
@@ -19,8 +20,8 @@ def create_who_is_bigger(root):
     title_label = tk.Label(bigger_window,text='Кто тяжелее?',font=title_font,bg="#BDFCC9")
     title_label.place(relx=0.5,rely=0.1,anchor=tk.CENTER)
 
-    cow_image = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\korova.png")
-    kotik_image = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\kotik.png")
+    cow_image = load_image_by_name('korova')
+    kotik_image = load_image_by_name('kot_around_the_world1')
 
     cow_button = tk.Button(bigger_window, image=cow_image, width=400, height=400,bg="#FFC107")
     cow_button.place(relx=0.3, rely=0.5, anchor='center')
