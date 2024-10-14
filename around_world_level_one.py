@@ -6,6 +6,8 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from image_loader import load_image_by_name
 from shake_manager import shake_button
+from  winner_animation import create_ball_animation_window
+from around_the_world_level_two import  create_dog_house_window
 def create_who_is_bigger(root):
     from menu_window_creation import create_menu
 
@@ -24,7 +26,7 @@ def create_who_is_bigger(root):
     cow_image = load_image_by_name('korova')
     kotik_image = load_image_by_name('kot_around_the_world1')
 
-    cow_button = tk.Button(bigger_window, image=cow_image, width=400, height=400,bg="#FFC107")
+    cow_button = tk.Button(bigger_window, image=cow_image, width=400, height=400,bg="#FFC107",command=lambda: create_ball_animation_window(root,create_dog_house_window))
     cow_button.place(relx=0.3, rely=0.5, anchor='center')
 
     kotik_button = tk.Button(bigger_window, image=kotik_image, width=400, height=400,bg="#FFC107",command=lambda: shake_button(kotik_button))
