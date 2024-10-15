@@ -32,6 +32,7 @@ def create_who_is_bigger(root):
     kotik_button = tk.Button(bigger_window, image=kotik_image, width=400, height=400,bg="#FFC107",command=lambda: shake_button(kotik_button))
     kotik_button.place(relx=0.7, rely=0.5, anchor='center')
 
+
     attach_hover_sound(cow_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\korova.mp3")
     attach_hover_sound(kotik_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\kot.mp3")
     menu_button = tk.Button(bigger_window, text="Главное меню", font=button_font, bg="#FFC107", width=20, height=3,

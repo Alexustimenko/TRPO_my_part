@@ -4,6 +4,8 @@ from window_manager import switch_window
 from cursor_manager import apply_cursor_to_window
 from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
+from winner_categories import create_ball_animation_window_for_categories
+from shake_manager import shake_button
 
 def create_dog_house_window(root):
     from menu_window_creation import create_menu
@@ -29,16 +31,17 @@ def create_dog_house_window(root):
     budka_picture = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\budka.png")
     skvorechnik_picture = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\skvorechnik.png")
 
-    nest_button = tk.Button(dog_window,image=nest_picture,width=200,height=200)
+    nest_button = tk.Button(dog_window,image=nest_picture,width=200,height=200,bg="#FFC107",command=lambda:shake_button(nest_button))
     nest_button.place(relx=0.2,rely=0.6,anchor=tk.CENTER)
 
-    nora_button = tk.Button(dog_window, image=nora_picture, width=200, height=200)
+    nora_button = tk.Button(dog_window, image=nora_picture, width=200, height=200,bg="#FFC107",command=lambda:shake_button(nora_button))
     nora_button.place(relx=0.4, rely=0.6, anchor=tk.CENTER)
 
-    budka_button = tk.Button(dog_window, image=budka_picture, width=200, height=200)
+    budka_button = tk.Button(dog_window, image=budka_picture, width=200, height=200,bg="#FFC107",
+                             command=lambda: create_ball_animation_window_for_categories(root))
     budka_button.place(relx=0.6, rely=0.6, anchor=tk.CENTER)
 
-    skvorechnik_button = tk.Button(dog_window, image=skvorechnik_picture, width=200, height=200)
+    skvorechnik_button = tk.Button(dog_window, image=skvorechnik_picture, width=200, height=200,bg="#FFC107",command=lambda:shake_button(skvorechnik_button))
     skvorechnik_button.place(relx=0.8, rely=0.6, anchor=tk.CENTER)
 
     attach_hover_sound(nest_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\gnezdo.mp3")
