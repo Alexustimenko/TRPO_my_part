@@ -6,6 +6,7 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from winner_categories import create_ball_animation_window_for_categories
 from shake_manager import shake_button
+from image_loader import load_image_by_name
 
 def create_dog_house_window(root):
     from menu_window_creation import create_menu
@@ -22,14 +23,14 @@ def create_dog_house_window(root):
     title_label=tk.Label(dog_window,text="Выбери домик для собачки",font=title_font,bg="#BDFCC9")
     title_label.place(relx=0.5,rely=0.1,anchor=tk.CENTER)
 
-    dog_image = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\dog.png")
+    dog_image = load_image_by_name('dog')
     dog_label= tk.Label(dog_window,image=dog_image,bg="#BDFCC9")
     dog_label.place(relx=0.5,rely=0.3,anchor=tk.CENTER)
 
-    nest_picture=tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\gnezdo.png")
-    nora_picture = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\nora.png")
-    budka_picture = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\budka.png")
-    skvorechnik_picture = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\skvorechnik.png")
+    nest_picture=load_image_by_name('gnezdo')
+    nora_picture = load_image_by_name('nora')
+    budka_picture = load_image_by_name('budka')
+    skvorechnik_picture = load_image_by_name('skvorechnik')
 
     nest_button = tk.Button(dog_window,image=nest_picture,width=200,height=200,bg="#FFC107",command=lambda:shake_button(nest_button))
     nest_button.place(relx=0.2,rely=0.6,anchor=tk.CENTER)
