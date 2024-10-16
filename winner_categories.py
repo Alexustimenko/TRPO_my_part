@@ -3,6 +3,7 @@ from window_config import configure_window
 from cursor_manager import apply_cursor_to_window
 from play_once import play_on_loading
 from categories_selection import create_category_window
+from image_loader import load_image_by_name
 
 def play_encouraging_sound_for_categories():
     play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\nextgame.mp3")
@@ -29,7 +30,7 @@ def create_ball_animation_window_for_categories(root):
     ball_canvas = tk.Canvas(animation_window,bg="#BDFCC9")
     ball_canvas.pack(fill=tk.BOTH,expand=True)
 
-    ball_image = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\balls.png")
+    ball_image = load_image_by_name('balls')
 
     def initialize_ball_image():
         ball_canvas_width=ball_canvas.winfo_width()

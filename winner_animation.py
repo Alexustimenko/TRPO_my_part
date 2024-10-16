@@ -2,7 +2,7 @@ from imports import tk
 from window_config import configure_window
 from cursor_manager import apply_cursor_to_window
 from play_once import play_on_loading
-
+from image_loader import load_image_by_name
 def play_encouraging_sound():
     play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\umnichka.mp3")
 
@@ -29,7 +29,7 @@ def create_ball_animation_window(root, on_finish_window):
     ball_canvas = tk.Canvas(animation_window, bg='#BDFCC9')
     ball_canvas.pack(fill=tk.BOTH, expand=True)
 
-    ball_image = tk.PhotoImage(file="F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\images\\balls.png")
+    ball_image = load_image_by_name('balls')
 
     def initialize_ball_image():
 
