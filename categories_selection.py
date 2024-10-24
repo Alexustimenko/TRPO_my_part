@@ -5,6 +5,8 @@ from cursor_manager import apply_cursor_to_window
 def create_category_window(root):
     from menu_window_creation import create_menu
     from around_world_level_one import create_who_is_bigger
+    from attention_level_one import create_find_extra_image_window
+    from vnimanie_level_one import create_vnimanie_one
     category_window = tk.Toplevel(root)
     apply_cursor_to_window(category_window)
     configure_window(category_window)
@@ -18,10 +20,12 @@ def create_category_window(root):
     cat1_button = tk.Button(category_window,text="Математика",font=button_font,bg="#FFC107",width=20,height=3)
     cat1_button.place(relx=0.2,rely=0.5,anchor='center')
 
-    cat2_button = tk.Button(category_window,text="Логика",font=button_font,bg="#FFC107",width=20,height=3)
+    cat2_button = tk.Button(category_window,text="Логика",font=button_font,bg="#FFC107",width=20,height=3,
+                            command=lambda: switch_window(category_window,create_find_extra_image_window,root))
     cat2_button.place(relx=0.4,rely=0.5,anchor='center')
 
-    cat3_button = tk.Button(category_window,text="Внимание",font=button_font,bg="#FFC107",width=20,height=3)
+    cat3_button = tk.Button(category_window,text="Внимание",font=button_font,bg="#FFC107",width=20,height=3,
+                            command=lambda: switch_window(category_window,create_vnimanie_one,root))
     cat3_button.place(relx=0.6,rely=0.5,anchor='center')
 
     cat4_button = tk.Button(category_window,text="Развитие речи",font=button_font,bg="#FFC107",width=20,height=3)
