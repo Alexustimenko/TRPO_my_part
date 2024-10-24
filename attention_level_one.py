@@ -6,6 +6,8 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from shake_manager import shake_button
 from image_loader import load_image_by_name
+from logicleveltwo import create_find_mother_window
+from winner_animation import create_ball_animation_window
 
 def create_find_extra_image_window(root):
     from menu_window_creation import create_menu
@@ -42,7 +44,7 @@ def create_find_extra_image_window(root):
     button_2.place(relx=0.4, rely=0.6, anchor=tk.CENTER)
 
     button_3 = tk.Button(extra_image_window, image=picture_3, width=200, height=200, bg="#FFC107",
-                         command=lambda: shake_button(button_3))
+                         command=lambda: create_ball_animation_window(root,create_find_mother_window))
     button_3.place(relx=0.6, rely=0.6, anchor=tk.CENTER)
 
     button_4 = tk.Button(extra_image_window, image=picture_4, width=200, height=200, bg="#FFC107",
