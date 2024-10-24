@@ -6,6 +6,8 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from shake_manager import shake_button
 from image_loader import load_image_by_name
+from winner_animation import create_ball_animation_window
+from attentionlevel2 import create_remember_picture_window
 
 def create_vnimanie_one(root):
     from menu_window_creation import create_menu
@@ -38,7 +40,7 @@ def create_vnimanie_one(root):
     button_1.place(relx=0.2, rely=0.6, anchor=tk.CENTER)
 
     button_2 = tk.Button(extra_image_window, image=picture_2, width=200, height=200, bg="#FFC107",
-                         command=lambda: shake_button(button_2))
+                         command=lambda: create_ball_animation_window(root,create_remember_picture_window))
     button_2.place(relx=0.4, rely=0.6, anchor=tk.CENTER)
 
     button_3 = tk.Button(extra_image_window, image=picture_3, width=200, height=200, bg="#FFC107",
