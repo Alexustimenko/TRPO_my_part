@@ -6,7 +6,8 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from shake_manager import shake_button
 from image_loader import load_image_by_name
-
+from winner_animation import create_ball_animation_window
+from mathleveltwo import create_count_triangles_window
 def create_count_cubes_window(root):
     from menu_window_creation import create_menu
 
@@ -31,7 +32,7 @@ def create_count_cubes_window(root):
 
     button_1 = tk.Button(cubes_window, text="1", font=button_font, width=10, height=2, bg="#FFC107")
     button_2 = tk.Button(cubes_window, text="2", font=button_font, width=10, height=2, bg="#FFC107")
-    button_3 = tk.Button(cubes_window, text="3", font=button_font, width=10, height=2, bg="#FFC107", command=lambda: shake_button(button_3))
+    button_3 = tk.Button(cubes_window, text="3", font=button_font, width=10, height=2, bg="#FFC107", command=lambda: create_ball_animation_window(root,create_count_triangles_window))
     button_4 = tk.Button(cubes_window, text="4", font=button_font, width=10, height=2, bg="#FFC107")
 
 
