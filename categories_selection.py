@@ -8,6 +8,7 @@ def create_category_window(root):
     from attention_level_one import create_find_extra_image_window
     from vnimanie_level_one import create_vnimanie_one
     from mathlevelone import create_count_cubes_window
+    from speaking_level_one import create_listen_and_choose_window
     category_window = tk.Toplevel(root)
     apply_cursor_to_window(category_window)
     configure_window(category_window)
@@ -30,7 +31,8 @@ def create_category_window(root):
                             command=lambda: switch_window(category_window,create_vnimanie_one,root))
     cat3_button.place(relx=0.6,rely=0.5,anchor='center')
 
-    cat4_button = tk.Button(category_window,text="Развитие речи",font=button_font,bg="#FFC107",width=20,height=3)
+    cat4_button = tk.Button(category_window,text="Развитие речи",font=button_font,bg="#FFC107",width=20,height=3,
+                            command=lambda:switch_window(category_window,create_listen_and_choose_window,root))
     cat4_button.place(relx=0.8,rely=0.5,anchor='center')
 
     cat5_button = tk.Button(category_window,text="Окружающий мир",font=button_font,bg="#FFC107",width=20,height=3,
