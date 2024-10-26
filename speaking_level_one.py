@@ -7,6 +7,8 @@ from play_once import play_on_loading
 from play_on_hover import attach_hover_sound
 from image_loader import load_image_by_name
 from shake_manager import shake_button
+from winner_animation import create_ball_animation_window
+from speaking_leveL_two import create_continue_phrase_window
 
 def create_listen_and_choose_window(root):
     from menu_window_creation import create_menu
@@ -32,7 +34,7 @@ def create_listen_and_choose_window(root):
 
 
     word_button1 = tk.Button(listen_window, image=word_image1, bg="#FFC107", command=lambda:shake_button(word_button1))
-    word_button2 = tk.Button(listen_window, image=word_image2, bg="#FFC107", command=lambda:shake_button(word_button2))
+    word_button2 = tk.Button(listen_window, image=word_image2, bg="#FFC107", command=lambda:create_ball_animation_window(root,create_continue_phrase_window))
     word_button1.place(relx=0.35, rely=0.5, anchor=tk.CENTER)
     word_button2.place(relx=0.65, rely=0.5, anchor=tk.CENTER)
 
