@@ -12,8 +12,8 @@ from winner_animation import create_ball_animation_window
 def create_find_extra_image_window(root):
     from menu_window_creation import create_menu
 
-    # Звук при загрузке окна
-    #play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\find_extra.mp3")
+    #Звук при загрузке окна
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\chto_lishnee.mp3")
 
     # Создание окна
     extra_image_window = tk.Toplevel(root)
@@ -52,10 +52,10 @@ def create_find_extra_image_window(root):
     button_4.place(relx=0.8, rely=0.6, anchor=tk.CENTER)
 
     # Добавление звуков при наведении на кнопки
-    #attach_hover_sound(button_1, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture1.mp3")
-    #attach_hover_sound(button_2, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture2.mp3")
-    #attach_hover_sound(button_3, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture3.mp3")
-    #attach_hover_sound(button_4, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture4.mp3")
+    attach_hover_sound(button_1, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\myachik.mp3")
+    attach_hover_sound(button_2, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\piramidka.mp3")
+    attach_hover_sound(button_3, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\kaktus.mp3")
+    attach_hover_sound(button_4, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\cubiki.mp3")
 
     # Кнопка "Главное меню"
     menu_button = tk.Button(extra_image_window, text="Главное меню", font=button_font, bg="#FFC107",
@@ -63,7 +63,7 @@ def create_find_extra_image_window(root):
     menu_button.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
 
     # Звук при наведении на кнопку "Главное меню"
-    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menumale.mp3")
 
     # Сохранение ссылок на изображения, чтобы они отображались
     extra_image_window.picture_1 = picture_1

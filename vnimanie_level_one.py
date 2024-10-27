@@ -13,7 +13,7 @@ def create_vnimanie_one(root):
     from menu_window_creation import create_menu
 
     # Звук при загрузке окна
-    #play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\find_extra.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\naidilishnuu.mp3")
 
     # Создание окна
     extra_image_window = tk.Toplevel(root)
@@ -51,11 +51,7 @@ def create_vnimanie_one(root):
                          command=lambda: shake_button(button_4))
     button_4.place(relx=0.8, rely=0.6, anchor=tk.CENTER)
 
-    # Добавление звуков при наведении на кнопки
-    #attach_hover_sound(button_1, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture1.mp3")
-    #attach_hover_sound(button_2, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture2.mp3")
-    #attach_hover_sound(button_3, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture3.mp3")
-    #attach_hover_sound(button_4, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\picture4.mp3")
+
 
     # Кнопка "Главное меню"
     menu_button = tk.Button(extra_image_window, text="Главное меню", font=button_font, bg="#FFC107",

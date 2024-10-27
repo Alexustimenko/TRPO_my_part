@@ -11,7 +11,7 @@ from winner_categories import create_ball_animation_window_for_categories
 def create_count_triangles_window(root):
     from menu_window_creation import create_menu
 
-    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\count_triangles.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\triangles.mp3")
 
     triangles_window = tk.Toplevel(root)
     apply_cursor_to_window(triangles_window)
@@ -64,10 +64,10 @@ def create_count_triangles_window(root):
     button_4.place(relx=0.8, rely=0.7, anchor=tk.CENTER)
 
 
-    # attach_hover_sound(button_1, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option1.mp3")
-    # attach_hover_sound(button_2, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option2.mp3")
-    # attach_hover_sound(button_3, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option3.mp3")
-    # attach_hover_sound(button_4, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option4.mp3")
+    attach_hover_sound(button_1, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\one.mp3")
+    attach_hover_sound(button_2, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\two.mp3")
+    attach_hover_sound(button_3, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\three.mp3")
+    attach_hover_sound(button_4, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\four.mp3")
 
 
     menu_button = tk.Button(triangles_window, text="Главное меню", font=button_font, bg="#FFC107",

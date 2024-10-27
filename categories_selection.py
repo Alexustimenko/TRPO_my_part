@@ -2,6 +2,8 @@ from imports import tk, font
 from window_config import configure_window
 from window_manager import switch_window
 from cursor_manager import apply_cursor_to_window
+from play_once import play_on_loading
+from play_on_hover import attach_hover_sound
 def create_category_window(root):
     from menu_window_creation import create_menu
     from around_world_level_one import create_who_is_bigger
@@ -9,6 +11,7 @@ def create_category_window(root):
     from vnimanie_level_one import create_vnimanie_one
     from mathlevelone import create_count_cubes_window
     from speaking_level_one import create_listen_and_choose_window
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\category.mp3")
     category_window = tk.Toplevel(root)
     apply_cursor_to_window(category_window)
     configure_window(category_window)
@@ -44,3 +47,9 @@ def create_category_window(root):
     menu_button.place(relx=0.5,rely=0.85,anchor='center')
 
     apply_cursor_to_window(category_window)
+    attach_hover_sound(menu_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(cat1_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\math.mp3")
+    attach_hover_sound(cat2_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\logic.mp3")
+    attach_hover_sound(cat3_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\vnimanie.mp3")
+    attach_hover_sound(cat4_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\speaking.mp3")
+    attach_hover_sound(cat5_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\world.mp3")
