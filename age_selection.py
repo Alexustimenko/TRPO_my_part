@@ -34,5 +34,7 @@ def create_age_window(root):
     main_menu_button.place(relx=0.5, rely=0.85, anchor='center')
 
     attach_hover_sound(main_menu_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(left_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\3_5years.mp3")
+    attach_hover_sound(right_button,"F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\6_8years.mp3")
 
 

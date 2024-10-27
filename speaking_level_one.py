@@ -14,7 +14,7 @@ def create_listen_and_choose_window(root):
     from menu_window_creation import create_menu
 
     # Воспроизведение звука при загрузке окна
-    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\listen_and_choose.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\poslushaivnimatelno.mp3")
 
     listen_window = tk.Toplevel(root)
     apply_cursor_to_window(listen_window)
@@ -50,7 +50,7 @@ def create_listen_and_choose_window(root):
     menu_button.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
 
 
-    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menumale.mp3")
 
 
     listen_window.word_image1 = word_image1

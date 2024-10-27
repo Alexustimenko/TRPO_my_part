@@ -12,7 +12,7 @@ from winner_categories import create_ball_animation_window_for_categories
 def create_remember_picture_window(root):
     from menu_window_creation import create_menu
 
-    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\remember_picture.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\zapomnikartinku.mp3")
 
     picture_window = tk.Toplevel(root)
     apply_cursor_to_window(picture_window)
@@ -53,10 +53,7 @@ def create_remember_picture_window(root):
     picture_window.after(5000, show_buttons)
 
 
-    # attach_hover_sound(option1_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option1.mp3")
-    # attach_hover_sound(option2_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option2.mp3")
-    # attach_hover_sound(option3_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option3.mp3")
-    # attach_hover_sound(option4_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\option4.mp3")
+
 
     menu_button = tk.Button(picture_window, text="Главное меню", font=button_font, bg="#FFC107", command=lambda: switch_window(picture_window, create_menu, root))
     menu_button.place(relx=0.5, rely=0.85, anchor=tk.CENTER)

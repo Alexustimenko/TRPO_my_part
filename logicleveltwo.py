@@ -11,7 +11,7 @@ from winner_categories import create_ball_animation_window_for_categories
 def create_find_mother_window(root):
     from menu_window_creation import create_menu
 
-    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\find_mother.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\naidimamu.mp3")
 
     mother_window = tk.Toplevel(root)
     apply_cursor_to_window(mother_window)
@@ -44,15 +44,15 @@ def create_find_mother_window(root):
     cat_button = tk.Button(mother_window, image=kurica_picture, width=200, height=200, bg="#FFC107", command=lambda: create_ball_animation_window_for_categories(root))
     cat_button.place(relx=0.8, rely=0.6, anchor=tk.CENTER)
 
-    # attach_hover_sound(lion_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\lion.mp3")
-    # attach_hover_sound(elephant_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\elephant.mp3")
-    # attach_hover_sound(bird_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\bird.mp3")
-    # attach_hover_sound(cat_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\cat.mp3")
+    attach_hover_sound(lion_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\korovamale.mp3")
+    attach_hover_sound(elephant_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\kotmale.mp3")
+    attach_hover_sound(bird_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\slonmale.mp3")
+    attach_hover_sound(cat_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\kuricamale.mp3")
 
     menu_button = tk.Button(mother_window, text="Главное меню", font=button_font, bg="#FFC107", command=lambda: switch_window(mother_window, create_menu, root))
     menu_button.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
 
-    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menumale.mp3")
 
     mother_window.baby_image = baby_image
     mother_window.korova_picture = korova_picture

@@ -13,7 +13,7 @@ def create_continue_phrase_window(root):
     from menu_window_creation import create_menu
 
 
-    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\continue_phrase.mp3")
+    play_on_loading("F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\nashatanya.mp3")
 
     phrase_window = tk.Toplevel(root)
     apply_cursor_to_window(phrase_window)
@@ -63,7 +63,7 @@ def create_continue_phrase_window(root):
     menu_button.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
 
 
-    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menu.mp3")
+    attach_hover_sound(menu_button, "F:\\College\\ТРПО\\TRPO Final\\Razvivushka\\sounds\\menumale.mp3")
 
 
     phrase_window.option_image1 = option_image1
